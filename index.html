@@ -21,18 +21,18 @@
     
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="">Nosotros</a></li>
-                    <li><a href="">Servicios</a></li>
-                    <li><a href="">Contactanos</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="#contact">Contactanos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <!-- CABECERA -->
 
-    <section class="brand-section">
+    <section class="brand-section background filtro relative">
         <div class="container">
-            <div class="brand-container">
+            <div class="brand-container relative">
     
                 <div class="brand-description">
                     <div class="brand">
@@ -40,13 +40,13 @@
                         <h3>Trilogia Vial</h3>
                     </div>
 
-                    <h1>Consultoría en seguridad vial</h1>
+                    <h1 class="titles">Consultoría en seguridad vial</h1>
                     <p>En Trilogía Vial SAS, promovemos una cultura vial inclusiva con programas educativos innovadores para todas las edades y grupos comunitarios. Creemos en la seguridad vial para todos.</p>
                 </div>
 
                 <div class="buttons">
-                    <button>Servicios</button>
-                    <button>Nosotros</button>
+                    <button style="margin-bottom: 2rem;" onclick="location.href='services.html'">Servicios</button>
+                    <button onclick="location.href='#about'">Nosotros</button>
                 </div>
 
             </div>
@@ -54,9 +54,10 @@
     </section>
     <!-- SECCION MARCA -->
 
-    <section class="about-us">
+    <section class="about-us background">
         <div class="container">
             <div class="content-about">
+                
                 <div class="box">
                     <i class="fa-solid fa-shield-halved"></i>
                     <h3>Especialización en Seguridad</h3>
@@ -83,5 +84,150 @@
             </div>
         </div>
     </section>
+    <!-- SECCION SOBRE NOSOTROS -->
+
+    <section class="brand-section services-hero background filtro relative">
+        <div class="container">
+            <div class="brand-container relative">
+    
+                <div class="brand-description">
+                    <div class="brand">
+                        <i class="fa-solid fa-road-circle-check"></i>
+                        <h3>Trilogia Vial</h3>
+                    </div>
+
+                    <h1 class="titles">Nuestros servicios</h1>
+                    <p>En Trilogía Vial, nos dedicamos a fortalecer la seguridad vial a través de soluciones integrales y asesoramiento especializado. </p>
+                </div>
+
+                <div class="buttons">
+                    <button>Leer más</button>
+                    <!-- <button>Nosotros</button> -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- NUESTROS SERVICIOS -->
+
+    <section class="about-us about-content-bar background">
+        <div class="container">
+            <div class="content-about content-bar">
+                <h1 class="">Llamanos y recibe una asesoria completamente gratis</h1>
+                <button onclick="location.href='#contact'">Contactar</button>
+            </div>
+        </div>
+    </section>
+    <!-- LLAMANOS PROMOCION -->
+
+    <section class="about background filtro relative" id="about">
+        <div class="container">
+            <div class="content-about-us relative">
+                <div class="content">
+                    <h1 class="titles">Nuestra empresa</h1>
+                    <p>Trilogía Vial SAS es una empresa privada compuesta por profesionales especializados en diversas áreas de la seguridad vial. Nos destacamos en la prestación de servicios relacionados con el Plan Estratégico de Seguridad Vial (PESV) y el sistema de gestión ISO 39001:2014, con enfoque en sectores como hidrocarburos, metalurgia, transporte, construcción y más.</p>
+
+                    <div class="content-cards-about">
+                        <div class="card-about">
+                            <i class="fa-solid fa-industry"></i>
+                            <div class="content-text">
+                                <h3 style="color: var(--verde);">Nuestra misión</h3>
+                                <p>Brindar asesoramiento y capacitación en seguridad vial, garantizando la satisfacción del cliente y promoviendo el bienestar general.</p>
+                            </div>
+                        </div>
+    
+                        <div class="card-about">
+                            <i class="fa-solid fa-road-circle-check"></i>
+                            <div class="content-text">
+                                <h3 style="color: var(--rojo);">Nuestra visión</h3>
+                                <p>Liderar la seguridad vial nacional, destacando por la calidad de nuestros servicios y el bienestar de nuestros colaboradores.</p>
+                            </div>
+                        </div>
+    
+                        <div class="card-about">
+                            <i class="fa-solid fa-star"></i>
+                            <div class="content-text">
+                                <h3 style="color: var(--amarillo);">Nuestra politica de calidad</h3>
+                                <p>Contamos con un equipo competente y comprometido con nuestro crecimiento y el de nuestros clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCION NOSOTROS -->
+
+    <section class="contact background" id="contact">
+        <div class="container">
+            <div class="content-contact">
+                <h1 class="titles">Contactanos</h1>
+                <p>Llama o envía un email y pregunta por nuestros programas</p>
+
+                <div class="content-form">
+                    <form action="">
+                        <label for="">Envianos tu solicitud...</label>
+                        <div class="campos">
+                            <input type="text" placeholder="Nombre">
+                        </div>
+    
+                        <div class="campos">
+                            <input type="email" placeholder="Email">
+                        </div>
+    
+                        <div class="campos">
+                            <input type="tel" placeholder="Telefono">
+                        </div>
+    
+                        <div class="campos">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        </div>
+    
+                        <div class="campos">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+
+                    <div class="contact-text">
+
+                        <div class="items-contact">
+                            <i class="fa-solid fa-phone"></i>
+                            <p>57 (1) 602 6102</p>
+                        </div>
+
+                        <div class="items-contact">
+                            <i class="fa-solid fa-mobile-button"></i>
+                            <p>315 87 555 87</p>
+                        </div>
+
+                        <div class="items-contact">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>carlosjuliorocha@gmail.com</p>
+                        </div>
+
+                        <div class="items-contact">
+                            <i class="fa-solid fa-map-location"></i>
+                            <p>Carrera 34 No. 4 A 04, Bogotá, D.C</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTACTANOS -->
+
+    <footer>
+        <div class="container">
+            <div class="content-footer">
+                <a href="index.html"><img src="img/logoTrilogiaVial.png" alt="Logo" class="img-logo"></a>
+
+                <p>Desarrollado por Paula Leguizamo - 2024</p>
+
+                <p><span style="color: var(--amarillo);">Trilogia</span> <span style="color: var(--verde);">Vial</span> <span style="color: var(--rojo);">S.A.S</span></p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
