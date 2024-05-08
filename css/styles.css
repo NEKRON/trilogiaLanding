@@ -5,9 +5,10 @@
     --rojoSecundario: #8c1c1cb2;
     --gris: #3C3D40;
     --grisSecundario: #3c3d40e7;
+    --grisTerciario: #3c3d40b7;
     --verde: #005C53;
     --verdeSecundario: #005c53a8;
-    --verdeTerciario: #005c5379;
+    --verdeTerciario: #005c539d;
     --fuente: "Open Sans", sans-serif;
 }
 
@@ -22,15 +23,16 @@ html {
     font-family: var(--fuente);
 }
 
-body {
+body {}
 
-}
-
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 .container {
     max-width: 100rem;
     height: 100%;
@@ -46,7 +48,7 @@ section {
 }
 
 li {
-    list-style:  none;
+    list-style: none;
 }
 
 a {
@@ -58,11 +60,24 @@ a {
     color: #FFF;
 }
 
+.subtitles {
+    color: #FFF;
+    text-align: center;
+    font-size: 1rem;
+}
+
 @media (min-width: 900px) {
     .titles {
         font-size: 3.5rem
     }
+
+    .subtitles {
+        font-size: 1.3rem;
+    }
+
 }
+
+
 
 .background {
     background-size: cover;
@@ -73,17 +88,26 @@ p {
     color: #FFF;
 }
 
+.description {
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+    .description {
+        font-size: 1.2rem;
+    }
+}
+
 button {
-    width: 15rem;
-    height: 2.8rem;
+    width: 10rem;
+    height: 2.5rem;
     border-radius: 3rem;
     border: none;
     background-color: var(--amarillo);
     cursor: pointer;
-    font-size: .9rem;
-    letter-spacing: .1rem;
+    font-size: .7rem;
     transition: all .3s ease-in-out;
-    font-weight: 600;
+    font-weight: bold;
     color: #FFF;
     border: 2px solid var(--amarillo);
 }
@@ -93,15 +117,45 @@ button:hover {
     transform: scale(0.9);
 }
 
+@media (min-width: 768px) {
+    button {
+        width: 15rem;
+        height: 2.8rem;
+        font-size: .9rem;
+    }
+}
+
 /* ======================== */
 /* FILTROS */
 /* ======================== */
 .filtro::before {
     position: absolute;
     content: '';
-    top: 0; bottom: 0;
-    left: 0; right: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background-color: var(--verdeTerciario);
+}
+
+.filtro2::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--rojoSecundario);
+}
+
+.filtro3::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--grisTerciario);
 }
 
 .relative {
@@ -112,24 +166,22 @@ button:hover {
 /* FONDOS */
 /* ======================== */
 .brand-section {
-    background-image: url(../img/banner1.jpg);
+    background-image: url(../img/banner1.avif);
 }
 
-.about-us {
-    
-}
+.about-us {}
 
 .services-hero {
-    background-image: url(../img/banner2.jpg);
+    background-image: url(../img/banner2.avif);
 
 }
 
 .about {
-    background-image: url(../img/banner3.jpg);
+    background-image: url(../img/banner3.avif);
 }
 
 .contact {
-    background-image: url(../img/contact.jpg);
+    background-image: url(../img/contact.avif);
 }
 
 /* ======================== */
@@ -182,7 +234,7 @@ nav ul li a:hover {
     nav a img {
         margin: 0;
     }
-    
+
     nav ul {
         flex-direction: inherit;
         gap: 2rem;
@@ -231,42 +283,32 @@ nav ul li a:hover {
     margin-bottom: 2rem;
 }
 
-.brand-description p {
-
-}
+.brand-description p {}
 
 .buttons {
     text-align: center;
 }
 
 @media (min-width: 900px) {
-    .brand-section {
+    .brand-section {}
 
-    }
-
-    .brand-container {
-        
-    }
+    .brand-container {}
 
     .brand {
         justify-content: flex-start;
     }
-    
-    .brand i {
 
-    }
+    .brand i {}
 
     .brand-description {
         text-align: left;
     }
-    
+
     .brand-description h1 {
         margin: none;
     }
-    
-    .brand-description p {
 
-    }
+    .brand-description p {}
 
     .buttons {
         display: flex;
@@ -358,26 +400,18 @@ nav ul li a:hover {
         padding: 7rem 0;
         height: 100%;
     }
-    
-    .content-about {
 
-    }
-    
+    .content-about {}
+
     .content-about .box {
         width: 22rem;
     }
 
-    .content-about .box i {
-        
-    }
+    .content-about .box i {}
 
-    .content-about .box h3 {
-        
-    }
+    .content-about .box h3 {}
 
-    .content-about .box p {
-
-    }
+    .content-about .box p {}
 }
 
 /* ======================== */
@@ -479,7 +513,7 @@ nav ul li a:hover {
     height: auto;
     text-align: center;
     padding: 2rem 0;
-    /* background-image: url(../img/carros.jpg); */
+    /* background-image: url(../img/carros.avif); */
 }
 
 .content-contact {
@@ -548,9 +582,7 @@ nav ul li a:hover {
     color: #FFF;
 }
 
-.contact-text .items-contact p {
-
-}
+.contact-text .items-contact p {}
 
 form {
     width: 90%;
@@ -576,7 +608,8 @@ label {
     width: 80%;
 }
 
-.campos input, textarea {
+.campos input,
+textarea {
     width: 100%;
     height: 2.8rem;
     padding-left: 1rem;
@@ -614,9 +647,7 @@ label {
         padding: 0;
     }
 
-    .content-contact p {
-        
-    }
+    .content-contact p {}
 
     .content-form {
         flex-direction: row-reverse;
@@ -628,11 +659,11 @@ label {
         border-top-left-radius: 2rem;
         border-bottom-right-radius: 0;
     }
-    
+
     form {
         width: 45%;
         border-top-right-radius: 2rem;
-        border-bottom-right-radius: 2rem;    
+        border-bottom-right-radius: 2rem;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
     }
@@ -663,4 +694,329 @@ footer {
 footer p {
     color: var(--rojo);
     font-weight: bolder;
+}
+
+
+/* ======================== */
+/* PAGINA SERVICIOS */
+/* ======================== */
+.services {
+    height: 60vh;
+    background-image: url(../img/servicesBanner.avif);
+}
+
+.services .container {
+    height: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.services .content-services {
+    width: 90%;
+    text-align: center;
+}
+
+.services .content-services p {
+    margin-top: 2rem;
+}
+
+@media(min-width: 768px) {
+    .services .content-services {
+        width: 70%;
+    }
+}
+
+/* CARDS SERVICES */
+.card-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.box-services {
+    width: 90%;
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.box-services:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px #b8b8b8;
+}
+
+.content-card__services {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem
+}
+
+@media (min-width: 768px) {
+    .box-services {
+        width: 30rem;
+        height: 20rem;
+        border-radius: 2rem;
+        padding: 0 2rem;
+    }
+
+    .content-card__services {
+        gap: 3rem
+    }
+}
+
+/* BACKGROUNDS CARDS */
+.esquema-documental {
+    background-image: url(../img/vial.avif);
+}
+
+.esquema-trafico {
+    background-image: url(../img/trafico.avif);
+}
+
+.esquema-capacitacion {
+    background-image: url(../img/capacitacion.avif);
+}
+
+.esquema-entrenamiento {
+    background-image: url(../img/entrenamiento.avif);
+}
+
+.esquema-accidente {
+    background-image: url(../img/accidente.avif);
+}
+
+.esquema-investigacion {
+    background-image: url(../img/investigacion.avif);
+}
+
+.esquema-mapa {
+    background-image: url(../img/mapa.avif);
+}
+
+.esquema-flota {
+    background-image: url(../img/flota.avif);
+}
+
+.esquema-mapa {
+    background-image: url(../img/mapa.avif);
+}
+
+.esquema-bus {
+    background-image: url(../img/bus.avif);
+}
+
+.esquema-alianza {
+    background-image: url(../img/alianza.avif);
+}
+
+
+/* ======================== */
+/* PAGINA SERVICIOS */
+/* ======================== */
+.card-description {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+@media (min-width: 1000px) {
+    .card-description {
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* SECTION LEFT */
+.left {
+    width: 100%;
+    height: 30rem;
+    display: flex;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+@media (min-width: 1000px) {
+    .left {
+        width: 55%;
+        height: inherit;
+        padding: 4rem;
+    }
+    
+}
+
+.content-left {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+}
+
+.fa-arrow-left {
+    color: #FFF;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .fa-arrow-left {
+        color: #FFF;
+        font-size: 2rem;
+        position: absolute;
+        top: 2rem;
+        left: 3rem;
+        cursor: pointer;
+    }
+}
+
+.content-left span {
+    display: grid;
+    place-items: center;
+    background-color: var(--rojo);
+    width: 7rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    font-weight: bold;
+    text-align: center;
+    color: #FFF;
+    font-size: .7rem;
+    cursor: pointer;
+}
+
+.content-left h1 {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.content-left p {
+    font-size: .8rem;
+}
+
+.content-left button {
+    letter-spacing: .2rem;
+}
+
+@media (min-width: 900px) {
+    .content-left span {
+        width: 10rem;
+        height: 2.5rem;
+        font-size: .9rem;
+    }
+    .content-left h1 {
+        font-size: 2.5rem;
+        padding-right: 3rem;
+        text-align: left;
+    }
+    
+    .content-left p {
+        font-size: 1rem;
+    }
+}
+
+/* SECCTION RIGHT */
+.right {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--gris);
+    padding: 1rem;
+}
+
+.right h2 {
+    color: #FFF;
+    font-size: 1.3rem;
+}
+
+@media (min-width: 1000px) {
+    .right {
+        width: 45%;
+        height: inherit;
+        padding: 1rem 3rem;
+        gap: 3rem;
+    }
+
+    .right h2 {
+        color: #FFF;
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+
+.right .items {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    gap: 1rem;
+}
+
+@media (min-width: 600px) {
+    .right .items {
+        flex-direction: row;
+        margin: 2rem 1rem;
+    }
+}
+
+.right .items h3 {
+    color: #FFF;
+    margin-bottom: 1rem;
+}
+
+.right .items i {
+    display: grid;
+    place-items: center;
+    color: #FFF;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.right .items p {
+    font-size: .9rem;
+}
+
+/* FONDOS TARJETAS DESCRIPCION */
+.descripcion-psv {
+    background-image: url(../img/investigacion.avif);
+}
+
+.description-ptm {
+    background-image: url(../img/transito.avif);
+}
+
+.description-ludico {
+    background-image: url(../img/ludico.avif);
+}
+
+.description-transito {
+    background-image: url(../img/accidenteSeguro.avif);
+}
+
+.description-investigar {
+    background-image: url(../img/investigar.avif);
+}
+
+.description-mapa {
+    background-image: url(../img/mapaElaborar.avif);
+}
+
+.description-seguros {
+    background-image: url(../img/seguros.avif);
 }
