@@ -567,7 +567,7 @@ nav ul li a:hover {
     transform: scale(0.9);
 }
 
-.contact-text .items-contact p {
+.contact-text .items-contact a, .contact-text .items-contact p {
     color: #FFF;
 }
 
