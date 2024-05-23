@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="container">
             <nav>
                 <a href="index.html">
@@ -27,8 +27,10 @@
                     <li><a href="#about">Nosotros</a></li>
                     <li><a href="services.html">Servicios</a></li>
                     <li><a href="#contact">Contactanos</a></li>
-                    <li><a href="https://www.instagram.com/trilogiavial_colombia?igsh=Mm1hZG90NDdvbGE4"><i class="fa-brands fa-instagram" style="color: #e1306c; font-size: 1.5rem"></i></a></li>
-                    <li><a href="https://www.facebook.com/TRILOGIAVIAL?mibextid=ZbWKwL"><i class="fa-brands fa-facebook" style="color: #1877f2; font-size: 1.5rem;"></i></a></li>
+                    <li><a href="https://www.instagram.com/trilogiavial_colombia?igsh=Mm1hZG90NDdvbGE4"><i
+                                class="fa-brands fa-instagram" style="color: #e1306c; font-size: 1.5rem"></i></a></li>
+                    <li><a href="https://www.facebook.com/TRILOGIAVIAL?mibextid=ZbWKwL"><i class="fa-brands fa-facebook"
+                                style="color: #1877f2; font-size: 1.5rem;"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -176,7 +178,7 @@
 
     <section class="brands-section background">
         <div class="content-brands">
-            <h1 class="titles" style="color: var(--amarillo);">Nuestros clientes nos respaldan</h1>
+            <h1 class="titles">Nuestros clientes nos respaldan</h1>
 
             <div class="carousel-container">
                 <div class="carousel">
@@ -247,8 +249,155 @@
 
     <section class="contact background" id="contact">
         <div class="container">
-            <div class="content-contact">
-                <h1 class="titles">Contactanos</h1>
+            <div class="content-contact relative">
+
+                <div class="content-form-left relative">
+                    <a href="#header">
+                        <img src="img/logoTrilogiaVial.png" alt="Logo">
+                    </a>
+
+                    <h1 class="titles">Contactanos</h1>
+                    <form action="">
+                        <div class="campos">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Nombre">
+                        </div>
+
+                        <div class="campos">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email">
+                        </div>
+
+                        <div class="campos">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" placeholder="Telefono">
+                        </div>
+
+                        <div class="campos">
+                            <i class="fa-solid fa-message"></i>
+                            <input type="text" placeholder="Mensaje">
+                        </div>
+
+                        <div class="campos">
+                            <input type="submit" value="Enviar">
+                        </div>
+                    </form>
+
+                    <div class="network">
+                        <a href="#header">trilogiavial.com</a>
+
+                        <div class="brand-network">
+                            <a href="https://www.facebook.com/TRILOGIAVIAL?mibextid=ZbWKwL"
+                                class="n-facebook">facebook</a>
+                            <a href="https://www.instagram.com/trilogiavial_colombia?igsh=Mm1hZG90NDdvbGE4"
+                                class="n-instagram">instagram</a>
+                            <a href="https://wa.me/3158755587?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20."
+                                class="n-whatsapp">whatsapp</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="content-form-right background">
+                    <div id="sede-bogota" class="sede active sede-bogota background filtro1">
+                        <div class="content-sedes relative">
+
+                            <div class="buttons-sedes">
+                                <i class="fa-regular fa-window-minimize bar-active" onclick="showBogota()"></i>
+                                <i class="fa-regular fa-window-minimize bar-off" onclick="showSantaMarta()"></i>
+                            </div>
+
+                            <div class="titles-sedes">
+                                <h3>Nuestra Sede Principal</h3>
+                                <h1>Bogotá D.C</h1>
+                            </div>
+                            
+                            <div class="items-sedes">
+                                <div class="items-contact">
+                                    <i class="fa-solid fa-map-location"></i>
+                                    <a href="https://www.google.com/maps?client=firefox-b-d&sca_esv=b5246bed5d27d0e1&sca_upv=1&output=search&q=Carrera+34+No.+4+A+04,+Bogot%C3%A1,+D.C&source=lnms&entry=mc&ved=1t:200715&ictx=111"
+                                        target="_blank">Carrera 34 No. 4 A 04, Bogotá, D.C</p>
+                                </div>
+    
+                                <div class="items-contact">
+                                    <i class="fa-solid fa-mobile-button"></i>
+                                    <a
+                                        href="https://wa.me/3158755587?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20.">315 87 555 87</a>
+                                </div>
+    
+    
+                                <div class="items-contact">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:carlos.rocha@trilogiavial.com">carlos.rocha@trilogiavial.com</a>
+                                </div>
+                                <div class="items-contact">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:trilogiavial@yahoo.com">trilogiavial@yahoo.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="sede-santaMarta" class="sede sede-santaMarta background filtro1">
+                        <div class="content-sedes relative">
+
+                            <div class="buttons-sedes">
+                                <i class="fa-regular fa-window-minimize bar-off" onclick="showBogota()"></i>
+                                <i class="fa-regular fa-window-minimize bar-active" onclick="showSantaMarta()"></i>
+                            </div>
+
+                            <div class="titles-sedes">
+                                <h3>Nuestra Sucursal</h3>
+                                <h1>Santa Marta</h1>
+                            </div>
+
+                            <div class="items-sedes">
+                                <div class="items-contact">
+                                    <i class="fa-solid fa-map-location"></i>
+                                    <a href="https://www.google.com/maps/search/Calle+21+No+6+-+48+Centro+Historico+Santa+Marta/@11.2448267,-74.2143614,17z/data=!3m1!4b1?entry=ttu"
+                                        target="_blank">Calle 21 No 6 - 48 Centro Historico Santa Marta</a>
+                                </div>
+    
+                                <!-- <div class="items-contact">
+                                    <i class="fa-solid fa-phone"></i>
+                                    <a href="#">57 (1) 602 6102</a>
+                                </div> -->
+    
+                                <div class="items-contact">
+                                    <i class="fa-solid fa-mobile-button"></i>
+                                    <a
+                                        href="https://wa.me/3157794404?text=Hola,%20estoy%20interesado%20en%20sus%20servicios%20.">315
+                                        779 44 04</a>
+                                </div>
+    
+                                <div class="items-contact">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:ortando.torres@trilogiavial.com">ortando.torres@trilogiavial.com</a>
+                                </div>
+    
+                                <div class="items-contact">
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:trilogiavial@yahoo.com">trilogiavial@yahoo.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+
+                    function showBogota() {
+                        document.getElementById('sede-bogota').classList.add('active');
+                        document.getElementById('sede-santaMarta').classList.remove('active');
+                    }
+
+                    function showSantaMarta() {
+                        document.getElementById('sede-bogota').classList.remove('active');
+                        document.getElementById('sede-santaMarta').classList.add('active');
+                    }
+
+                </script>
+                <!-- <h1 class="titles">Contactanos</h1>
                 <p class="description">Llama o envía un email y pregunta por nuestros programas</p>
 
                 <div class="content-form">
@@ -298,7 +447,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -311,7 +460,8 @@
 
                 <p>Desarrollado por Paula Leguizamo - 2024</p>
 
-                <p><span style="color: var(--amarillo);">Trilogia</span> <span style="color: var(--verde);">Vial</span><span style="color: var(--rojo);">S.A.S</span></p>
+                <p><span style="color: var(--amarillo);">Trilogia</span> <span
+                        style="color: var(--verde);">Vial</span><span style="color: var(--rojo);">S.A.S</span></p>
             </div>
         </div>
     </footer>

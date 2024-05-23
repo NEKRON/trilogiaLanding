@@ -9,6 +9,7 @@
     --verde: #005C53;
     --verdeSecundario: #005c53a8;
     --verdeTerciario: #005c539d;
+    --grisFiltro: #3c3d406b;
     --fuente: "Open Sans", sans-serif;
 }
 
@@ -138,6 +139,16 @@ button:hover {
     background-color: var(--verdeTerciario);
 }
 
+.filtro1::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--grisFiltro);
+}
+
 .filtro2::before {
     position: absolute;
     content: '';
@@ -181,7 +192,7 @@ button:hover {
 }
 
 .contact {
-    background-image: url(../img/contact.avif);
+    /* background-image: url(../img/contact.avif); */
 }
 
 /* ======================== */
@@ -510,162 +521,279 @@ nav ul li a:hover {
 /* CONTACT */
 /* ======================== */
 .contact {
+    width: 100%;
     height: auto;
-    text-align: center;
-    padding: 2rem 0;
-    /* background-image: url(../img/carros.avif); */
 }
 
 .content-contact {
+    height: 90rem;
+    display: flex;
+    position: relative;
+    flex-direction: column-reverse;
+    box-shadow: 4px 4px 4px rgb(229, 229, 229);
+    border-radius: 2rem;
+}
+
+
+.content-contact img {
+    width: 5rem;
+    margin: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.content-form-left {
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-}
-
-.content-contact h1 {
-    color: var(--verde);
-}
-
-.content-contact p {
-    color: var(--verde);
-    margin: 2rem 0;
-}
-
-.content-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    border-radius: 2rem;
-    height: auto;
-    margin-top: 2rem;
-}
-
-.contact-text {
-    width: 90%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: left;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
-    background-color: var(--verdeSecundario);
     padding: 2rem;
 }
 
-.contact-text .items-contact {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin: .5rem 0;
-}
-
-.contact-text .items-contact:hover {
-    transition: all .3s ease;
-    transform: scale(0.9);
-}
-
-.contact-text .items-contact a, .contact-text .items-contact p {
-    color: #FFF;
-}
-
-.contact-text .items-contact i {
-    display: grid;
-    place-items: center;
-    font-size: 1.5rem;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    background-color: var(--gris);
-    color: #FFF;
-}
-
-.contact-text .items-contact p {}
-
-form {
-    width: 90%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 2rem;
-    border-top-left-radius: 2rem;
-    padding: 2rem 0;
-    gap: 2rem;
-    background-color: var(--gris);
-}
-
-label {
-    color: #FFF;
-    font-weight: bold;
-    letter-spacing: .1rem;
-}
-
-.campos {
-    width: 80%;
-}
-
-.campos input,
-textarea {
+.content-form-left h1 {
     width: 100%;
-    height: 2.8rem;
-    padding-left: 1rem;
-    border: none;
-    border-bottom: 1px solid var(--gris);
-    background-color: #f0f0f0;
-}
-
-.campos textarea {
-    height: 10rem;
-    padding: 1rem;
-}
-
-.campos input[type="submit"] {
-    padding: 0;
-    border: none;
-    cursor: pointer;
-    background-color: var(--verdeSecundario) !important;
-    color: #FFF;
-    font-size: 1rem;
-    letter-spacing: .1rem;
-    border-radius: 2rem;
-    width: 15rem;
-}
-
-.campos input[type="submit"]:hover {
-    transition: all .3s ease-in-out;
-    background-color: #FFF !important;
+    text-align: left !important;
     color: var(--verde);
 }
 
-@media (min-width: 900px) {
+.content-form-left form {
+    width: 100%;
+}
+
+.content-form-left .campos {
+    height: 3.2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.content-form-left .campos:last-child {
+    border: none;
+    padding: 0;
+}
+
+.content-form-left .campos input {
+    border: none;
+    width: 100%;
+    height: 3.5rem;
+    color: var(--verde);
+    font-weight: bold;
+    font-family: var(--fuente);
+    border: 2px solid #ebebeb;
+    border-radius: .5rem;
+    padding: 0 2.5rem;
+}
+
+.content-form-left .campos i {
+    position: absolute;
+    color: var(--verdeSecundario);
+    padding: 0 0 0 1rem;
+}
+
+.content-form-left form input[type=submit] {
+    width: 10rem;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    background-color: var(--verde);
+    color: #FFF;
+    font-size: 1rem;
+    letter-spacing: .2rem;
+    margin: 0rem;
+    transition: all .3s ease-in-out;
+}
+
+.content-form-left form input[type=submit]:hover {
+    background-color: var(--amarillo);
+    transform: scale(.9);
+}
+
+.network {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: .8rem;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .network {
+        flex-direction: row;
+        gap: 0;
+    }
+}
+
+.brand-network {
+    display: inherit;
+    font-size: .8rem;
+    gap: 1rem;
+}
+
+.network a {
+    color: var(--rojo);
+    font-weight: bold;
+}
+
+.brand-network a {
+    color: var(--verdeSecundario);
+}
+
+.brand-network a:hover {
+    color: var(--verde);
+}
+
+.content-form-right {
+    width: 100%;
+    height: 100%;
+}
+
+/* styles.css */
+
+.content-form-right {
+    position: relative;
+}
+
+.sede {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s;
+    border-bottom-right-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+}
+
+.sede::before {
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.sede.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sede-bogota {
+    background-image: url(../img/sede-bogota.avif);
+    height: 100%;
+}
+
+.sede-santaMarta {
+    background-image: url(../img/sede-santaMarta.avif);
+    height: 100%;
+}
+
+.items-sedes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-weight: bold;
+}
+
+.content-sedes {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+.content-sedes h1, .content-sedes i, .content-sedes a, .content-sedes h3 {
+    color: #FFF;
+}
+
+.content-sedes h3 {
+    font-size: .8rem;
+}
+
+.content-sedes h1 {
+    font-size: 2.5rem;
+}
+
+.content-sedes i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.content-sedes a {
+    font-size: 1rem;
+}
+
+.bar-active {
+    color: #FFF;
+}
+
+.bar-off {
+    color: #ffffff8f !important;
+}
+
+.fa-window-minimize {
+    font-size: 2.5rem !important;
+    margin: 0 .2rem !important;
+    cursor: pointer
+}
+
+@media (min-width: 1200px) {
     .contact {
         height: 100vh;
-        padding: 0;
     }
 
-    .content-contact p {}
-
-    .content-form {
-        flex-direction: row-reverse;
-        height: 40rem;
+    .content-contact {
+        height: 100%;
+        flex-direction: row;
+    }
+    
+    .content-form-left {
+        width: 40%;
+        padding: 0 5rem;
     }
 
-    .contact-text {
-        width: 30%;
-        border-top-left-radius: 2rem;
-        border-bottom-right-radius: 0;
+    .content-form-right {
+        width: 60%;
     }
-
-    form {
-        width: 45%;
+    
+    .content-form-right {
         border-top-right-radius: 2rem;
         border-bottom-right-radius: 2rem;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+    }
+
+    .content-sedes {
+        padding: 5rem 7rem;
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+
+    .content-sedes h1, .content-sedes i, .content-sedes a {
+        color: #FFF;
+    }
+    
+    .content-sedes h3 {
+        font-size: 1rem;
+        color: #FFF;
+    }
+    
+    .content-sedes h1 {
+        font-size: 4rem;
+        color: #FFF;
+    }
+    
+    .content-sedes i {
+        font-size: 1.5rem;
+        margin-right: 2rem;
+    }
+    
+    .content-sedes a {
+        font-size: 1.2rem;
     }
 }
 
@@ -1038,6 +1166,19 @@ footer p {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+
+.content-brands h1 {
+    color: var(--verde);
+    text-align: center;
+    padding: 0 4rem;
+    font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+    .content-brands h1 {
+        font-size: 3rem;
+    }
 }
 
 /* CAROUSEL */
